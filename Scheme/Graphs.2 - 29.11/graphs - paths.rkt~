@@ -1,0 +1,20 @@
+#lang racket
+
+;task1
+
+(e)
+(f b e)
+(g a)))
+
+(define (vertices g)
+  (map car g))
+
+(define (successors v g)
+  (let [(result (assoc v g))]
+    (if result (cdr result) result)))
+
+(define (Has-ede? u v g)
+  (if (member v (successors u g)) #t #f))
+
+    
+
