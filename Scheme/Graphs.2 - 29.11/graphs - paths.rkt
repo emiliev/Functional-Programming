@@ -104,16 +104,12 @@
     (apply append (map (lambda (v) (filter (lambda (v) (not (member? v visited)))
                              (successors v g))) current)))
         (define (helper current result)
-          (let [(next (get-next-level current visited))]
+          (let [(next (get-next-level current result))]
             (if (null? next)
                 result
                 (helper next (append result next)))))
   (helper (list v) (list v)))
-          
-            
-                
 
-
-
-
-          
+;task10
+(define (find-path u v g)
+  
